@@ -1,0 +1,13 @@
+/* .main-wrapper {
+    background: rgb(34,193,195);
+background: linear-gradient(180deg, rgba(34,193,195,1) 10%, rgba(45,253,164,1) 100%);
+width: 100vw;
+height: 100vh;
+} */
+
+body {  
+    background: rgb(34,193,195);
+    background: linear-gradient(180deg, rgba(34,193,195,1) 10%, rgba(45,253,164,1) 100%);
+
+    
+}
