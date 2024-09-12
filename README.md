@@ -1,2 +1,2 @@
 # CICD-Pipeline-Project
-Creation of CICD pipeline using MSFT Azure services
+A basic static website and github action scripts to test a CICD pipeline using Azure cloud services.
