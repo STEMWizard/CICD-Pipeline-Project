@@ -1,0 +1,26 @@
+name: Deploy to Azure Storage
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps: 
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - uses: azure/login@v1
+        with:
+          creds: ${{secrets.AZURE_CREDENTIALS}}
+      - name: Upload to blob Storage
+        uses: azure/CLI@v1
+        with:
+          inlineScript: |
+              az storage blob upload-batch --account-name cicdsite --auth-mode key -d '$web' -s.
+      
+      - name: logout
+        run : | 
+                az logout
+        if: always()
